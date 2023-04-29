@@ -1,10 +1,8 @@
 package basecms;
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 
-// TODO -> DEVELOP AUTH
 
 public class Resources {
 
@@ -16,31 +14,6 @@ public class Resources {
     static Statement connect() {
         String dbURL = "jdbc:mysql://localhost:3306/cms";
        
-    //    try {
-    //        Class.forName("com.mysql.cj.jdbc.Driver");
-    //        Connection connect = DriverManager.getConnection(dbURL, "root" , "9907224577");
-           
-           
-    //        if (connect != null) {
-    //            System.out.print("Connection was successful !");
-    //            Statement statement = connect.createStatement();
-    //            return statement;
-    //        } else {
-    //            System.out.print("Database connection was failed ! Try again later.");
-    //            return null;               
-   
-    //        }
-           
-           
-           
-           
-    //    } catch (Exception e) {
-    //        System.out.print(e.getMessage());
-    //        System.out.print("Not connected");
-           
-    //    }
-
-
      try{  
             // Class.forName("com.mysql.jdbc.Driver");  
            Class.forName("com.mysql.cj.jdbc.Driver");

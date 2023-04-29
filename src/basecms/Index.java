@@ -7,11 +7,12 @@ public  class Index {
     public static void main(String[] args) {
         // System.out.println("hello, world");
         Resources.connect();
-        menuOptions();
+//        menuOptions();
+        HomeScreen.homeScreen();
     }
 
 
-    // Main menu
+    // Main me1nu
     static void menuOptions()  {
 
         while (true) {

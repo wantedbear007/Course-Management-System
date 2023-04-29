@@ -2,6 +2,7 @@ package basecms;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Scanner;
+//import javax.swing.table.*;
 
 class Admin {
     static Statement statement = Resources.connect();
@@ -53,7 +54,7 @@ class Admin {
         switch (userInput) {
             case 1:
                 Resources.welcome("Register New User: ");
-                newRegistration();
+//                newRegistration();
                 break;
             case 2:
                 Resources.welcome("View Available Courses: ");
@@ -87,65 +88,85 @@ class Admin {
     
 
     // user registration
-    static void newRegistration() {
-
-        String number = null;
+    static void newRegistration(String uRegistration, String uName, String uContact, String uEmail, String uDept, String uAge, String uGender, String uPassword ) {
         
         
-        String regNumber = null;
-        while (true) {
-            System.out.println("Enter Registration number: ");
-            regNumber = sc.nextLine();
-            if (regNumber.length() == 8) {
-                break;
-            } 
-        }
-
-        System.out.println("Enter your name: ");
-        String name = sc.nextLine();
-        while (true) {
-            System.out.println("Enter phone number (10 digits):");
-            number = sc.nextLine();
-            if (number.matches("\\d{10}")) {
-                break;
-            }
-            System.out.println("Invalid phone number. Please enter 10 digits.");
-        }
-
-        String email = null;
-        while (true) {
-            System.out.println("Enter email address:");
-            email = sc.nextLine();
-            if (email.matches("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$")) {
-                break;
-            }
-            System.out.println("Invalid email address. Please enter a valid email address.");
-        }
-
-        System.out.println("Enter your school Dept: ");
+        System.out.print("reg: " + uRegistration + " name: " + uName + " contact " + uContact + " email " + uEmail + " dept " + uDept + " age " + uAge + " gender " + uGender + " password: " + uPassword  );
         
-        String school = null;
-        school = sc.nextLine();
-        System.out.println("Enter age:");
-        int age = sc.nextInt();
 
-        System.out.println("Enter M/F");
-        char ch = sc.next().charAt(0);
-
-        sc.nextLine();
-      
-        System.out.println("Enter password");
-        String password = sc.next();   
-
+//        String number = null;
+//        
+//        
+//        String regNumber = null;
+//        while (true) {
+//            System.out.println("Enter Registration number: ");
+//            regNumber = sc.nextLine();
+//            if (regNumber.length() == 8) {
+//                break;
+//            } 
+//        }
+//
+//        System.out.println("Enter your name: ");
+//        String name = sc.nextLine();
+//        while (true) {
+//            System.out.println("Enter phone number (10 digits):");
+//            number = sc.nextLine();
+//            if (number.matches("\\d{10}")) {
+//                break;
+//            }
+//            System.out.println("Invalid phone number. Please enter 10 digits.");
+//        }
+//
+//        String email = null;
+//        while (true) {
+//            System.out.println("Enter email address:");
+//            email = sc.nextLine();
+//            if (email.matches("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$")) {
+//                break;
+//            }
+//            System.out.println("Invalid email address. Please enter a valid email address.");
+//        }
+//
+//        System.out.println("Enter your school Dept: ");
+//        
+//        String school = null;
+//        school = sc.nextLine();
+//        System.out.println("Enter age:");
+//        int age = sc.nextInt();
+//
+//        System.out.println("Enter M/F");
+//        char ch = sc.next().charAt(0);
+//
+//        sc.nextLine();
+//      
+//        System.out.println("Enter password");
+//        String password = sc.next();   
+//
         String teacher = "false";
-
-        // <- UPLOADING TO DATABASE ->
+//
+//        // <- UPLOADING TO DATABASE ->
        
-        String sqlQuery = "INSERT INTO REGISTED_USER (name ,reg,phone, email, schooldep, age, sex, pass, teacher)VALUES ("  + "'" 
-        + name + "','"  
-        + regNumber + "','" + number + "','" + email + "','" + school + "'," + age + ",'" + ch + "','" + password + "'," + teacher 
-         + ");";
-        try {
+//        String sqlQuery = "INSERT INTO REGISTED_USER (name ,reg,phone, email, schooldep, age, sex, pass, teacher)VALUES ("  + "'" 
+//        + name + "','"  
+//        + regNumber + "','" + number + "','" + email + "','" + school + "'," + age + ",'" + ch + "','" + password + "'," + teacher 
+//         + ");";
+//        try {
+//            statement.executeUpdate(sqlQuery);
+//
+//        } catch (Exception e) {
+//            System.out.println(e);
+//            System.out.println("Database error" + e.getMessage());
+//            System.exit(0);
+//        }
+//        Resources.welcome("You are successfully registered !");
+
+//String uRegistration, String uName, String uContact, String uEmail, String uDept, String uAge, String uGender, String uPassword )
+ String sqlQuery = "INSERT INTO REGISTED_USER (name ,reg,phone, email, schooldep, age, sex, pass, teacher)VALUES ("  + "'" 
+        + uName + "','"  
+        + uRegistration + "','" + uContact + "','" + uEmail + "','" + uDept + "'," + uAge + ",'" + uGender + "','" + uPassword + "'," + teacher 
+        + ");";
+ 
+         try {
             statement.executeUpdate(sqlQuery);
 
         } catch (Exception e) {
@@ -159,26 +180,51 @@ class Admin {
     }
 
     // Available courses module
-    static void availableCourses() {
+    static ResultSet availableCourses() {
         Resources.welcome("Available Courses");
 
+//        String id, name, author, duration, price, rating, certification, enroll;
+//        String[] headers = {"id", "name", "author", "duration", "price", "rating", "certification", "enroll"};
+//        ArrayList<String> data = 
         try {
-
-            
             ResultSet resultSet = statement.executeQuery("SELECT * FROM COURSES");
-
-        while (resultSet.next()) {
-            System.out.println("--------------------------------------------------------------");
-            System.out.println("Name: " + resultSet.getString("name"));
-            System.out.println("University / Author: " + resultSet.getString("author"));
-            System.out.println("Course Duration: " + resultSet.getString("duration") + " Weeks");
-            System.out.println("Subscription charges: " + resultSet.getString("price"));
-            System.out.println("Rating: " + resultSet.getString("rating"));
-            System.out.println("Certification available: " + resultSet.getString("certification"));
-            System.out.println("Enrolled students: " + resultSet.getString("enroll"));
             
-        }
+            
+            return resultSet;
+
+//        while (resultSet.next()) {
+//            
+//            String id = resultSet.getString("id");
+//            String name = resultSet.getString("name");
+//            String author = resultSet.getString("author");
+//            String duration = resultSet.getString("duration");
+//            String price = resultSet.getString("price");
+//            String rating = resultSet.getString("rating");
+//            String cerification = resultSet.getString("enroll");
+//            
+//            String[] headData = {id, name, author, duration, price, rating, cerification};
+//            
+//            return headData;
+////            DefaultTableModel tableModel = (DefaultTableModel)coursesTable.getModel();
+//            
+//            
+////            sno = resultSet.getString("id");
+////            name=  ;
+////            author = resultSet.getString("author");
+////            
+////            System.out.println("--------------------------------------------------------------");
+////            System.out.println("Name: " + resultSet.getString("name"));
+////            System.out.println("University / Author: " + resultSet.getString("author"));
+////            System.out.println("Course Duration: " + resultSet.getString("duration") + " Weeks");
+////            System.out.println("Subscription charges: " + resultSet.getString("price"));
+////            System.out.println("Rating: " + resultSet.getString("rating"));
+////            System.out.println("Certification available: " + resultSet.getString("certification"));
+////            System.out.println("Enrolled students: " + resultSet.getString("enroll"));
+//            
+//        }
     } catch (Exception e) {System.out.println(e);}
+        
+        return null;
 
     }
 
