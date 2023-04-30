@@ -63,11 +63,11 @@ class Admin {
             case 3:
                 Resources.welcome("View Registered Teachers: ");
                 // Students.index();     
-                registeredUsers(false);           
+//                registeredUsers(false);           
                 break;
         case 4:
                 Resources.welcome("View Registered Students");
-                registeredUsers(false);
+//                registeredUsers(false);
                 break;
 
         case 5:
@@ -229,29 +229,31 @@ class Admin {
     }
 
     // VIEW REGISTERED USERS
-    static void registeredUsers(boolean isTeacher) {
-        String user = isTeacher ? "Teachers" : "Students";
-        Resources.welcome("Registered "  + user);
+    static ResultSet registeredUsers() {
+//        String user = isTeacher ? "Teachers" : "Students";
+//        Resources.welcome("Registered "  + user);
+        
+        ResultSet resultSet = null;
 
         try {
 
             
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM REGISTED_USER");
+            resultSet = statement.executeQuery("SELECT * FROM REGISTED_USER");
             // ResultSetMetaData metaData = resultSet.getMetaData();
             
+            
             // int columns  = metaData.getColumnCount();
-            while (resultSet.next()) {
-              
-        System.out.println("Name: " + resultSet.getString("name"));
-        System.out.println("Registration number: " + resultSet.getString("reg"));         
-        System.out.println("Contact number: " + resultSet.getString("phone"));
-        System.out.println("Email Address: " + resultSet.getString("email"));
-        System.out.println("Department: " + resultSet.getString("schooldep"));
-        System.out.println("Age: " + resultSet.getString("sex"));
-        System.out.println("==========================================================\n");
-            }
+//            while (resultSet.next()) {
+//              
+//        System.out.println("Name: " + resultSet.getString("name"));
+//        System.out.println("Registration number: " + resultSet.getString("reg"));         
+//        System.out.println("Contact number: " + resultSet.getString("phone"));
+//        System.out.println("Email Address: " + resultSet.getString("email"));
+//        System.out.println("Department: " + resultSet.getString("schooldep"));
+//        System.out.println("Age: " + resultSet.getString("sex"));
+//        System.out.println("==========================================================\n");
         } catch (Exception e) {System.out.println(e);}
         
-    }
+        return resultSet;
     
-}
+}}

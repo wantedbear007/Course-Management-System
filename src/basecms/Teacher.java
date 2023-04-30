@@ -54,7 +54,7 @@ class Teacher {
                 break;
             case 3:
                 Resources.welcome(items[2]);
-                addNewCourse();
+//                addNewCourse();
                 break;
 
             case 4: 
@@ -87,51 +87,57 @@ class Teacher {
     }
 
     // <- MODULE TO SHOW STUDENTS PENDING FEES
-    static void pendingFees() {
+    static ResultSet pendingFees() {
+        
+        ResultSet resultSet = null;
         try {
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM FEE");
-            if (!resultSet.next()) {
-                System.out.println("No student with pending fees.");
-            } else {
-                System.out.println("Students with pending fees: ");
-                while (resultSet.next()) {
-                    System.out.println("Registration number: " + resultSet.getString("reg"));
-                    System.out.println("Pending dues: " + resultSet.getString("fees"));
-                }
-            }
+            resultSet = statement.executeQuery("SELECT * FROM FEE");
+            return resultSet;
+//            if (!resultSet.next()) {
+//                System.out.println("No student with pending fees.");
+//            } else {
+//                System.out.println("Students with pending fees: ");
+//                while (resultSet.next()) {
+//                    System.out.println("Registration number: " + resultSet.getString("reg"));
+//                    System.out.println("Pending dues: " + resultSet.getString("fees"));
+//                }
+//            }
         } catch (Exception e) {
             System.out.println(e);
         }
+        
+        return resultSet;
     }
 
     // <- MODULE TO ADD NEW COURSE ->
-    static void addNewCourse() {
-        Scanner sc = new Scanner(System.in);
+    static void addNewCourse(String name, String author, String duration, String price, String rating, int certification, String enrolled) {
+//        Scanner sc = new Scanner(System.in);
 
-        String name = null, author, price;
-        int duration, rating, certification, enrolled;
-
-        Resources.welcome("Enter the following details: ");
-        System.out.println("Enter the name of course: ");
-        name = sc.nextLine();
-        System.out.println("Enter University / Author name: ");
-        author = sc.nextLine();
-        System.out.println("Enter duration of course: ");
-        duration = sc.nextInt();
-        System.out.println("Enter subscription price: ");
-        price = sc.nextLine();
-        System.out.println("Enter the initial rating: ");
-        rating = sc.nextInt();
-        System.out.println("Certification: 0 for no 1 for yes ");
-        certification = sc.nextInt();
-        System.out.println("Enter the number of enrolled students: ");
-        enrolled = sc.nextInt();
+//        String name = null, author, price;
+//        int duration, rating, certification, enrolled;
+//
+//        Resources.welcome("Enter the following details: ");
+//        System.out.println("Enter the name of course: ");
+//        name = sc.nextLine();
+//        System.out.println("Enter University / Author name: ");
+//        author = sc.nextLine();
+//        System.out.println("Enter duration of course: ");
+//        duration = sc.nextInt();
+//        System.out.println("Enter subscription price: ");
+//        price = sc.nextLine();
+//        System.out.println("Enter the initial rating: ");
+//        rating = sc.nextInt();
+//        System.out.println("Certification: 0 for no 1 for yes ");
+//        certification = sc.nextInt();
+//        System.out.println("Enter the number of enrolled students: ");
+//        enrolled = sc.nextInt();
 
         // INSERT INTO courses (name,author,duration, price, rating, certification, enroll)VALUES ('CS50 Introduction to Computer Science','Harvard',12,'12999',4,1,25322);
 
         try {
-            String sqlQuery = "INSERT INTO courses (name,author,duration, price, rating, certification, enroll)VALUES ('" + name + "','" + author + "'," + duration + ",'" + price + "'," + rating + "," + certification + "," + enrolled + ");" ;
-            ResultSet resultSet = statement.executeQuery(sqlQuery);
+            String sqlQuery = "INSERT INTO courses (name,author,duration, price, rating, certification, enroll)VALUES ('"
+                    + "" + name + "','" + author + "'," + duration + ",'" + price + "'," + rating + "," + certification + "," + enrolled + ");" ;
+            statement.executeUpdate(sqlQuery);
 
             System.out.println("Course was successfully added ");
             
