@@ -16,6 +16,20 @@ public class HomeScreen extends javax.swing.JFrame {
 
     public HomeScreen() {
         initComponents();
+        teacherHome.setVisible(false);
+        adminLogin.setVisible(false);
+        adminPage.setVisible(false);
+        newUser.setVisible(false);
+        availableUsers.setVisible(false);
+        availableCourses.setVisible(false);
+        loginForm.setVisible(false);
+        availableCoursesTeacher.setVisible(false);
+        addNewCourse.setVisible(false);
+        pendingFees.setVisible(false);
+        studentLogin.setVisible(false);
+        studentHome.setVisible(false);
+        availableCourseStudents.setVisible(false);
+        studentProfile.setVisible(false);
     }
 
 
@@ -34,6 +48,12 @@ public class HomeScreen extends javax.swing.JFrame {
         loginbutton = new javax.swing.JButton();
         userGender = new javax.swing.ButtonGroup();
         buttonGroup1 = new javax.swing.ButtonGroup();
+        availableCourseStudents = new javax.swing.JPanel();
+        jLabel53 = new javax.swing.JLabel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        coursesTable3 = new javax.swing.JTable();
+        rightUserIcon4 = new javax.swing.JLabel();
+        jButton13 = new javax.swing.JButton();
         parentHome = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -146,6 +166,44 @@ public class HomeScreen extends javax.swing.JFrame {
         jScrollPane4 = new javax.swing.JScrollPane();
         coursesTable2 = new javax.swing.JTable();
         jButton8 = new javax.swing.JButton();
+        studentLogin = new javax.swing.JPanel();
+        jLabel46 = new javax.swing.JLabel();
+        jButton9 = new javax.swing.JButton();
+        jLabel47 = new javax.swing.JLabel();
+        jLabel48 = new javax.swing.JLabel();
+        userUserName1 = new javax.swing.JTextField();
+        userPassword1 = new javax.swing.JTextField();
+        jLabel49 = new javax.swing.JLabel();
+        teacherLogin1 = new javax.swing.JButton();
+        invalidWar1 = new javax.swing.JLabel();
+        studentHome = new javax.swing.JPanel();
+        leftUserDesc1 = new javax.swing.JLabel();
+        rightUserIcon3 = new javax.swing.JLabel();
+        jLabel50 = new javax.swing.JLabel();
+        jButton10 = new javax.swing.JButton();
+        jLabel51 = new javax.swing.JLabel();
+        jButton11 = new javax.swing.JButton();
+        jLabel52 = new javax.swing.JLabel();
+        jButton12 = new javax.swing.JButton();
+        studentProfile = new javax.swing.JPanel();
+        jLabel54 = new javax.swing.JLabel();
+        jButton14 = new javax.swing.JButton();
+        jLabel55 = new javax.swing.JLabel();
+        jLabel56 = new javax.swing.JLabel();
+        jLabel57 = new javax.swing.JLabel();
+        jLabel58 = new javax.swing.JLabel();
+        jLabel59 = new javax.swing.JLabel();
+        jLabel60 = new javax.swing.JLabel();
+        jLabel61 = new javax.swing.JLabel();
+        jLabel62 = new javax.swing.JLabel();
+        pName = new javax.swing.JLabel();
+        pReg = new javax.swing.JLabel();
+        pContact = new javax.swing.JLabel();
+        pEmail = new javax.swing.JLabel();
+        pDept = new javax.swing.JLabel();
+        pAge = new javax.swing.JLabel();
+        pGender = new javax.swing.JLabel();
+        pPassword = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
         jFrame1.getContentPane().setLayout(jFrame1Layout);
@@ -218,6 +276,74 @@ public class HomeScreen extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        availableCourseStudents.setMaximumSize(new java.awt.Dimension(1048, 615));
+        availableCourseStudents.setMinimumSize(new java.awt.Dimension(1048, 615));
+
+        jLabel53.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        jLabel53.setText("List of Available Online Courses:");
+
+        coursesTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "S.no", "Course Name", "Tutor / Organization", "Duration", "Price", "Rating", "Certification", "Enrolled Students"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane5.setViewportView(coursesTable3);
+
+        rightUserIcon4.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        rightUserIcon4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/user (1).png"))); // NOI18N
+        rightUserIcon4.setText("USER");
+
+        jButton13.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/back (1).png"))); // NOI18N
+        jButton13.setText("Back");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout availableCourseStudentsLayout = new javax.swing.GroupLayout(availableCourseStudents);
+        availableCourseStudents.setLayout(availableCourseStudentsLayout);
+        availableCourseStudentsLayout.setHorizontalGroup(
+            availableCourseStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(availableCourseStudentsLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(availableCourseStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(availableCourseStudentsLayout.createSequentialGroup()
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 989, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(45, Short.MAX_VALUE))
+                    .addGroup(availableCourseStudentsLayout.createSequentialGroup()
+                        .addComponent(jButton13)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel53)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(rightUserIcon4)
+                        .addGap(57, 57, 57))))
+        );
+        availableCourseStudentsLayout.setVerticalGroup(
+            availableCourseStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(availableCourseStudentsLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(availableCourseStudentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel53)
+                    .addComponent(rightUserIcon4)
+                    .addComponent(jButton13))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 552, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
         parentHome.setToolTipText("");
         parentHome.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         parentHome.setMaximumSize(new java.awt.Dimension(1048, 615));
@@ -276,7 +402,7 @@ public class HomeScreen extends javax.swing.JFrame {
                         .addGap(20, 20, 20)
                         .addGroup(parentHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(parentHomeLayout.createSequentialGroup()
-                                .addComponent(developerBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 261, Short.MAX_VALUE)
+                                .addComponent(developerBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 296, Short.MAX_VALUE)
                                 .addGap(643, 643, 643))
                             .addGroup(parentHomeLayout.createSequentialGroup()
                                 .addComponent(desc, javax.swing.GroupLayout.PREFERRED_SIZE, 451, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -305,14 +431,14 @@ public class HomeScreen extends javax.swing.JFrame {
                         .addComponent(teacherBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(studentBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 33, Short.MAX_VALUE))
+                        .addGap(0, 42, Short.MAX_VALUE))
                     .addGroup(parentHomeLayout.createSequentialGroup()
                         .addGap(8, 8, 8)
                         .addComponent(desc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(44, 44, 44)
                 .addComponent(jLabel3)
                 .addGap(126, 126, 126)
-                .addComponent(developerBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 52, Short.MAX_VALUE)
+                .addComponent(developerBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 61, Short.MAX_VALUE)
                 .addGap(17, 17, 17))
         );
 
@@ -858,7 +984,7 @@ public class HomeScreen extends javax.swing.JFrame {
         availableUsers.setMinimumSize(new java.awt.Dimension(1048, 615));
 
         jLabel27.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
-        jLabel27.setText("Resistered Users: ");
+        jLabel27.setText("Registered Users: ");
 
         backbtn2.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         backbtn2.setLabel("Back");
@@ -1399,11 +1525,349 @@ public class HomeScreen extends javax.swing.JFrame {
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
+        studentLogin.setMaximumSize(new java.awt.Dimension(1048, 615));
+        studentLogin.setMinimumSize(new java.awt.Dimension(1048, 615));
+
+        jLabel46.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        jLabel46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/student (1).png"))); // NOI18N
+        jLabel46.setText("Login as a Student");
+
+        jButton9.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/back (1).png"))); // NOI18N
+        jButton9.setText("Back");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+
+        jLabel47.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        jLabel47.setText("Enter Credentails");
+        jLabel47.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        jLabel48.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel48.setText("Username: ");
+
+        userUserName1.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        userUserName1.setText("12212215");
+        userUserName1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                userUserName1ActionPerformed(evt);
+            }
+        });
+
+        userPassword1.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        userPassword1.setText("9907224577");
+        userPassword1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                userPassword1ActionPerformed(evt);
+            }
+        });
+
+        jLabel49.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel49.setText("Password: ");
+
+        teacherLogin1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        teacherLogin1.setText("Login");
+        teacherLogin1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                teacherLogin1ActionPerformed(evt);
+            }
+        });
+
+        invalidWar1.setForeground(new java.awt.Color(245, 0, 0));
+
+        javax.swing.GroupLayout studentLoginLayout = new javax.swing.GroupLayout(studentLogin);
+        studentLogin.setLayout(studentLoginLayout);
+        studentLoginLayout.setHorizontalGroup(
+            studentLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(studentLoginLayout.createSequentialGroup()
+                .addGap(59, 59, 59)
+                .addGroup(studentLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton9)
+                    .addGroup(studentLoginLayout.createSequentialGroup()
+                        .addComponent(jLabel46)
+                        .addGap(143, 143, 143)
+                        .addGroup(studentLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(invalidWar1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, studentLoginLayout.createSequentialGroup()
+                                .addGroup(studentLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(studentLoginLayout.createSequentialGroup()
+                                        .addGroup(studentLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel48)
+                                            .addComponent(jLabel49))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(studentLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(userUserName1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(userPassword1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(jLabel47)
+                                    .addComponent(teacherLogin1))
+                                .addGap(15, 15, 15)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        studentLoginLayout.setVerticalGroup(
+            studentLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, studentLoginLayout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addComponent(jButton9)
+                .addGroup(studentLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(studentLoginLayout.createSequentialGroup()
+                        .addGap(161, 161, 161)
+                        .addComponent(jLabel46)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, studentLoginLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 165, Short.MAX_VALUE)
+                        .addComponent(jLabel47)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(studentLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel48)
+                            .addComponent(userUserName1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(studentLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel49)
+                            .addComponent(userPassword1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(teacherLogin1)
+                        .addGap(103, 103, 103)
+                        .addComponent(invalidWar1)
+                        .addGap(108, 108, 108))))
+        );
+
+        studentHome.setMaximumSize(new java.awt.Dimension(1048, 615));
+        studentHome.setMinimumSize(new java.awt.Dimension(1048, 615));
+
+        leftUserDesc1.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        leftUserDesc1.setText("Welcome to Course Mangement System, ");
+
+        rightUserIcon3.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        rightUserIcon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/user (1).png"))); // NOI18N
+        rightUserIcon3.setText("USER");
+
+        jLabel50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/money.png"))); // NOI18N
+
+        jButton10.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jButton10.setText("Available Courses");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+
+        jLabel51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/online-learning (1).png"))); // NOI18N
+
+        jButton11.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jButton11.setText("Profile Details");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
+
+        jLabel52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/cv.png"))); // NOI18N
+
+        jButton12.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jButton12.setText("Pending Fees");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout studentHomeLayout = new javax.swing.GroupLayout(studentHome);
+        studentHome.setLayout(studentHomeLayout);
+        studentHomeLayout.setHorizontalGroup(
+            studentHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, studentHomeLayout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(leftUserDesc1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(rightUserIcon3)
+                .addGap(51, 51, 51))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, studentHomeLayout.createSequentialGroup()
+                .addGroup(studentHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(studentHomeLayout.createSequentialGroup()
+                        .addGap(238, 238, 238)
+                        .addComponent(jLabel51)
+                        .addGap(69, 69, 69)
+                        .addComponent(jLabel52)
+                        .addGap(82, 82, 82)
+                        .addComponent(jLabel50))
+                    .addGroup(studentHomeLayout.createSequentialGroup()
+                        .addGap(221, 221, 221)
+                        .addComponent(jButton10)
+                        .addGap(46, 46, 46)
+                        .addComponent(jButton11)
+                        .addGap(55, 55, 55)
+                        .addComponent(jButton12)))
+                .addContainerGap(267, Short.MAX_VALUE))
+        );
+
+        studentHomeLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton10, jButton11, jButton12});
+
+        studentHomeLayout.setVerticalGroup(
+            studentHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(studentHomeLayout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addGroup(studentHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(leftUserDesc1)
+                    .addComponent(rightUserIcon3))
+                .addGap(177, 177, 177)
+                .addGroup(studentHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel50)
+                    .addComponent(jLabel52)
+                    .addComponent(jLabel51))
+                .addGap(18, 18, 18)
+                .addGroup(studentHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(studentHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButton11)
+                        .addComponent(jButton12))
+                    .addComponent(jButton10))
+                .addContainerGap(194, Short.MAX_VALUE))
+        );
+
+        studentProfile.setMaximumSize(new java.awt.Dimension(1045, 615));
+        studentProfile.setMinimumSize(new java.awt.Dimension(1045, 615));
+        studentProfile.setPreferredSize(new java.awt.Dimension(1045, 615));
+
+        jLabel54.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        jLabel54.setText("Profile Details: ");
+
+        jButton14.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/back (1).png"))); // NOI18N
+        jButton14.setText("Back");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+
+        jLabel55.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel55.setText("Full Name:");
+
+        jLabel56.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel56.setText("Registration Number: ");
+
+        jLabel57.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel57.setText("Contact Number: ");
+
+        jLabel58.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel58.setText("Email Address:");
+
+        jLabel59.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel59.setText("Department: ");
+
+        jLabel60.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel60.setText("Age: ");
+
+        jLabel61.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel61.setText("Gender: ");
+
+        jLabel62.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel62.setText("Password: ");
+
+        pName.setFont(new java.awt.Font("Century Gothic", 2, 18)); // NOI18N
+        pName.setText("Full Name:");
+
+        pReg.setFont(new java.awt.Font("Century Gothic", 2, 18)); // NOI18N
+        pReg.setText("Full Name:");
+
+        pContact.setFont(new java.awt.Font("Century Gothic", 2, 18)); // NOI18N
+        pContact.setText("Full Name:");
+
+        pEmail.setFont(new java.awt.Font("Century Gothic", 2, 18)); // NOI18N
+        pEmail.setText("Full Name:");
+
+        pDept.setFont(new java.awt.Font("Century Gothic", 2, 18)); // NOI18N
+        pDept.setText("Full Name:");
+
+        pAge.setFont(new java.awt.Font("Century Gothic", 2, 18)); // NOI18N
+        pAge.setText("Full Name:");
+
+        pGender.setFont(new java.awt.Font("Century Gothic", 2, 18)); // NOI18N
+        pGender.setText("Full Name:");
+
+        pPassword.setFont(new java.awt.Font("Century Gothic", 2, 18)); // NOI18N
+        pPassword.setText("Full Name:");
+
+        javax.swing.GroupLayout studentProfileLayout = new javax.swing.GroupLayout(studentProfile);
+        studentProfile.setLayout(studentProfileLayout);
+        studentProfileLayout.setHorizontalGroup(
+            studentProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(studentProfileLayout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addGroup(studentProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel55)
+                    .addGroup(studentProfileLayout.createSequentialGroup()
+                        .addComponent(jButton14)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(studentProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel56)
+                            .addComponent(jLabel54)
+                            .addComponent(jLabel57, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel58, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel62, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel61, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel60, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel59, javax.swing.GroupLayout.Alignment.TRAILING))))
+                .addGap(18, 18, 18)
+                .addGroup(studentProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pName)
+                    .addComponent(pReg)
+                    .addComponent(pContact)
+                    .addComponent(pEmail)
+                    .addComponent(pDept)
+                    .addComponent(pAge)
+                    .addComponent(pGender)
+                    .addComponent(pPassword))
+                .addContainerGap(605, Short.MAX_VALUE))
+        );
+        studentProfileLayout.setVerticalGroup(
+            studentProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(studentProfileLayout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addGroup(studentProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton14)
+                    .addComponent(jLabel54))
+                .addGap(54, 54, 54)
+                .addGroup(studentProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel55)
+                    .addComponent(pName))
+                .addGap(18, 18, 18)
+                .addGroup(studentProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel56)
+                    .addComponent(pReg))
+                .addGap(18, 18, 18)
+                .addGroup(studentProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel57)
+                    .addComponent(pContact))
+                .addGap(18, 18, 18)
+                .addGroup(studentProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel58)
+                    .addComponent(pEmail))
+                .addGap(18, 18, 18)
+                .addGroup(studentProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel59)
+                    .addComponent(pDept))
+                .addGap(18, 18, 18)
+                .addGroup(studentProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel60)
+                    .addComponent(pAge))
+                .addGap(18, 18, 18)
+                .addGroup(studentProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel61)
+                    .addComponent(pGender))
+                .addGap(18, 18, 18)
+                .addGroup(studentProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel62)
+                    .addComponent(pPassword))
+                .addContainerGap(171, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(parentHome, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1072, Short.MAX_VALUE)
+            .addComponent(parentHome, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1083, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -1454,6 +1918,26 @@ public class HomeScreen extends javax.swing.JFrame {
                     .addGap(6, 6, 6)
                     .addComponent(pendingFees, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(studentLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(148, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap(33, Short.MAX_VALUE)
+                    .addComponent(studentHome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(2, 2, 2)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(11, 11, 11)
+                    .addComponent(availableCourseStudents, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(12, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(studentProfile, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1510,6 +1994,26 @@ public class HomeScreen extends javax.swing.JFrame {
                     .addGap(6, 6, 6)
                     .addComponent(pendingFees, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(studentLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(18, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap(22, Short.MAX_VALUE)
+                    .addComponent(studentHome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(2, 2, 2)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(6, 6, 6)
+                    .addComponent(availableCourseStudents, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(studentProfile, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         pack();
@@ -1538,6 +2042,8 @@ public class HomeScreen extends javax.swing.JFrame {
 
     private void studentBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studentBtnActionPerformed
                        // TODO add your handling code here:
+                       parentHome.setVisible(false);
+                       studentLogin.setVisible(true);
     }//GEN-LAST:event_studentBtnActionPerformed
 
     private void adminBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminBtnActionPerformed
@@ -1579,6 +2085,18 @@ public class HomeScreen extends javax.swing.JFrame {
         // TODO add your handling code here:
         adminLogin.setVisible(false);
         parentHome.setVisible(true);
+        teacherHome.setVisible(false);
+//        adminLogin.setVisible(false);
+        adminPage.setVisible(false);
+        newUser.setVisible(false);
+        availableUsers.setVisible(false);
+        availableCourses.setVisible(false);
+        loginForm.setVisible(false);
+        availableCoursesTeacher.setVisible(false);
+        addNewCourse.setVisible(false);
+        pendingFees.setVisible(false);
+        studentLogin.setVisible(false);
+        
     }//GEN-LAST:event_backBtnActionPerformed
 
     private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtnActionPerformed
@@ -2024,37 +2542,96 @@ public class HomeScreen extends javax.swing.JFrame {
         pendingFees.setVisible(false);
     }//GEN-LAST:event_jButton8ActionPerformed
 
+    private void userUserName1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userUserName1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_userUserName1ActionPerformed
+
+    private void userPassword1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userPassword1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_userPassword1ActionPerformed
+
+    private void teacherLogin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teacherLogin1ActionPerformed
+        // TODO add your handling code here:
+        String username = userUserName1.getText();
+        String pass = userPassword1.getText();
+        String[] credentials = {username, pass};
+        ArrayList<String> userData = Resources.isValidUser(credentials, false);
+        userSession = userData;
+        
+        if (!userData.isEmpty()) {
+            System.out.print("user available");
+            Resources.loginSession(userData);
+            String header  = "Welcome to Online Course Management System, " + userData.get(0) + " !";
+            String icon = userData.get(0);
+            
+            rightUserIcon3.setText(icon);
+            leftUserDesc1.setText(header);
+//            rightUserIcon1.setText(icon);
+            studentLogin.setVisible(false);
+            studentHome.setVisible(true);
+        } else {
+            System.out.print("User not available");
+            invalidWar1.setText("Invalid credentials, Try again !");
+        }
+    }//GEN-LAST:event_teacherLogin1ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+        parentHome.setVisible(true);
+        pendingFees.setVisible(false);
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+        rightUserIcon4.setText(userSession.get(0));
+        availableCourseStudents.setVisible(true);
+        studentHome.setVisible(false);
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+        studentProfile.setVisible(true);
+        studentHome.setVisible(false);
+        for (String str : userSession) {
+            System.out.println(str);
+        }
+        
+        pName.setText(userSession.get(0));
+        pReg.setText(userSession.get(1));
+        pContact.setText(userSession.get(2));
+        pEmail.setText(userSession.get(3));
+        pDept.setText(userSession.get(4));
+        pAge.setText(userSession.get(5));
+        pGender.setText(userSession.get(6));
+        pPassword.setText(userSession.get(7));
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        // TODO add your handling code here:
+//        rightUserIcon4.set
+        studentHome.setVisible(true);
+        availableCourseStudents.setVisible(false);
+        
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        // TODO add your handling code here:
+        studentHome.setVisible(true);
+        studentProfile.setVisible(false);
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    
     
     public static void homeScreen() {
         
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(HomeScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(HomeScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(HomeScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(HomeScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                
+            public void run() {    
                 new HomeScreen().setVisible(true);
+                
             }
         });
     }
@@ -2066,6 +2643,7 @@ public class HomeScreen extends javax.swing.JFrame {
     private javax.swing.JPanel adminLogin;
     private static javax.swing.JPanel adminLoginJPanel;
     private javax.swing.JPanel adminPage;
+    private javax.swing.JPanel availableCourseStudents;
     private javax.swing.JPanel availableCourses;
     private javax.swing.JPanel availableCoursesTeacher;
     private javax.swing.JPanel availableUsers;
@@ -2078,13 +2656,20 @@ public class HomeScreen extends javax.swing.JFrame {
     private javax.swing.JTable coursesTable;
     private javax.swing.JTable coursesTable1;
     private javax.swing.JTable coursesTable2;
+    private javax.swing.JTable coursesTable3;
     private javax.swing.JLabel credError;
     private final javax.swing.JLabel desc = new javax.swing.JLabel();
     private javax.swing.JButton developerBtn;
     private javax.swing.JLabel errorF;
     private javax.swing.JRadioButton female;
     private javax.swing.JLabel invalidWar;
+    private javax.swing.JLabel invalidWar1;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -2092,6 +2677,7 @@ public class HomeScreen extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JFrame jFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -2133,8 +2719,25 @@ public class HomeScreen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
+    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel60;
+    private javax.swing.JLabel jLabel61;
+    private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -2144,13 +2747,23 @@ public class HomeScreen extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JLabel leftUserDesc;
+    private javax.swing.JLabel leftUserDesc1;
     private javax.swing.JButton loginBtn;
     private javax.swing.JPanel loginForm;
     private javax.swing.JButton loginbutton;
     private javax.swing.JRadioButton male;
     private javax.swing.JPanel newUser;
     private javax.swing.JRadioButton others;
+    private javax.swing.JLabel pAge;
+    private javax.swing.JLabel pContact;
+    private javax.swing.JLabel pDept;
+    private javax.swing.JLabel pEmail;
+    private javax.swing.JLabel pGender;
+    private javax.swing.JLabel pName;
+    private javax.swing.JLabel pPassword;
+    private javax.swing.JLabel pReg;
     private javax.swing.JPanel parentHome;
     private javax.swing.JTextField password;
     private javax.swing.JPanel pendingFees;
@@ -2158,11 +2771,17 @@ public class HomeScreen extends javax.swing.JFrame {
     private javax.swing.JLabel rightUserIcon;
     private javax.swing.JLabel rightUserIcon1;
     private javax.swing.JLabel rightUserIcon2;
+    private javax.swing.JLabel rightUserIcon3;
+    private javax.swing.JLabel rightUserIcon4;
     private javax.swing.JButton studentBtn;
+    private javax.swing.JPanel studentHome;
+    private javax.swing.JPanel studentLogin;
+    private javax.swing.JPanel studentProfile;
     private java.awt.Button studentsBtn;
     private javax.swing.JButton teacherBtn;
     private javax.swing.JPanel teacherHome;
     private javax.swing.JButton teacherLogin;
+    private javax.swing.JButton teacherLogin1;
     private java.awt.Button teachersBtn;
     private javax.swing.JTextField uAge;
     private javax.swing.JTextField uContact;
@@ -2179,7 +2798,9 @@ public class HomeScreen extends javax.swing.JFrame {
     private javax.swing.JTextField uRegistration7;
     private javax.swing.ButtonGroup userGender;
     private javax.swing.JTextField userPassword;
+    private javax.swing.JTextField userPassword1;
     private javax.swing.JTextField userUserName;
+    private javax.swing.JTextField userUserName1;
     private javax.swing.JTextField userid;
     private javax.swing.JTextField username;
     private javax.swing.JTextField userpass;

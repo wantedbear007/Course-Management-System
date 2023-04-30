@@ -40,7 +40,7 @@ public class Resources {
     public static ArrayList<String> isValidUser(String[] credentials, boolean isTeacher) {
 
         ArrayList<String> userData = new ArrayList<>();
-        String[] headers = {"name", "reg", "phone", "email", "schooldep", "age", "sex"};
+        String[] headers = {"name", "reg", "phone", "email", "schooldep", "age", "sex", "pass"};
         try {
             String sqlQuery = "SELECT * FROM REGISTED_USER WHERE reg='" + credentials[0] +  "' AND pass='" + credentials[1] + "';"; 
             ResultSet resultSet = statement.executeQuery(sqlQuery);

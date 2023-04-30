@@ -99,26 +99,27 @@ class Students {
                 System.out.println("Department: " + userData.get(4));
                 System.out.println("Age: " + userData.get(5));
 
-        // try {
-        //     System.out.println("Enter your registration number: ");
-        //     Scanner sc = new Scanner(System.in);
-        //     String reg = sc.nextLine();
-        // System.out.println(reg);
-        //     String sqlQuery = "SELECT * FROM REGISTED_USER WHERE reg=" + reg + ";"; 
-        //     // String sqlQString 
-        //     ResultSet resultSet = statement.executeQuery(sqlQuery);        
-        //     while (resultSet.next()) {
-        //         System.out.println("Name: " + resultSet.getString("name"));
-        //         System.out.println("Registration number: " + resultSet.getString("reg"));         
-        //         System.out.println("Contact number: " + resultSet.getString("phone"));
-        //         System.out.println("Email Address: " + resultSet.getString("email"));
-        //         System.out.println("Department: " + resultSet.getString("schooldep"));
-        //         System.out.println("Age: " + resultSet.getString("sex"));
-        //         System.out.println("==========================================================\n");
-        //     } 
-        // } catch (Exception e) {
-        //     System.out.println(e);
-        // }
+         try {
+             System.out.println("Enter your registration number: ");
+             Scanner sc = new Scanner(System.in);
+             String reg = sc.nextLine();
+         System.out.println(reg);
+             String sqlQuery = "SELECT * FROM REGISTED_USER WHERE reg=" + reg + ";"; 
+             // String sqlQString 
+             ResultSet resultSet = statement.executeQuery(sqlQuery); 
+             
+             while (resultSet.next()) {
+                 System.out.println("Name: " + resultSet.getString("name"));
+                 System.out.println("Registration number: " + resultSet.getString("reg"));         
+                 System.out.println("Contact number: " + resultSet.getString("phone"));
+                 System.out.println("Email Address: " + resultSet.getString("email"));
+                 System.out.println("Department: " + resultSet.getString("schooldep"));
+                 System.out.println("Age: " + resultSet.getString("sex"));
+                 System.out.println("==========================================================\n");
+             } 
+         } catch (Exception e) {
+             System.out.println(e);
+         }
     }
     // <- MODULE FOR VIEWING PENDING FEES ->
     static void pendingFees() {
