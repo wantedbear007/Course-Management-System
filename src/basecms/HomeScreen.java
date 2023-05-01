@@ -85,6 +85,7 @@ public class HomeScreen extends javax.swing.JFrame {
         adminBtn = new javax.swing.JButton();
         teacherBtn = new javax.swing.JButton();
         studentBtn = new javax.swing.JButton();
+        adminBtn1 = new javax.swing.JButton();
         teacherHome = new javax.swing.JPanel();
         leftUserDesc = new javax.swing.JLabel();
         rightUserIcon = new javax.swing.JLabel();
@@ -438,6 +439,15 @@ public class HomeScreen extends javax.swing.JFrame {
         desc.setText("Welcome to CMS");
         desc.setName(""); // NOI18N
 
+        adminBtn1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        adminBtn1.setText("About");
+        adminBtn1.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        adminBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                adminBtn1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout parentHomeLayout = new javax.swing.GroupLayout(parentHome);
         parentHome.setLayout(parentHomeLayout);
         parentHomeLayout.setHorizontalGroup(
@@ -445,18 +455,22 @@ public class HomeScreen extends javax.swing.JFrame {
             .addGroup(parentHomeLayout.createSequentialGroup()
                 .addGroup(parentHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(parentHomeLayout.createSequentialGroup()
-                        .addGap(691, 691, 691)
+                        .addGap(691, 924, Short.MAX_VALUE)
                         .addComponent(jLabel3))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, parentHomeLayout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addComponent(desc, javax.swing.GroupLayout.PREFERRED_SIZE, 451, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 314, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(parentHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(studentBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(adminBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(teacherBtn)
                             .addComponent(jLabel1))
-                        .addGap(19, 19, 19)))
+                        .addGap(19, 19, 19))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, parentHomeLayout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addComponent(adminBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(124, 124, 124))
         );
 
@@ -481,7 +495,9 @@ public class HomeScreen extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(44, 44, 44)
                 .addComponent(jLabel3)
-                .addGap(146, 146, 146))
+                .addGap(95, 95, 95)
+                .addComponent(adminBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28))
         );
 
         parentHomeLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {adminBtn, jLabel1, studentBtn, teacherBtn});
@@ -609,7 +625,6 @@ public class HomeScreen extends javax.swing.JFrame {
         jLabel8.setText("Login as Admin");
 
         username.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        username.setText("root");
         username.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 usernameActionPerformed(evt);
@@ -617,7 +632,6 @@ public class HomeScreen extends javax.swing.JFrame {
         });
 
         password.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        password.setText("root");
         password.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 passwordActionPerformed(evt);
@@ -1178,7 +1192,6 @@ public class HomeScreen extends javax.swing.JFrame {
         jLabel30.setText("Username: ");
 
         userUserName.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        userUserName.setText("12212215");
         userUserName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userUserNameActionPerformed(evt);
@@ -1186,7 +1199,6 @@ public class HomeScreen extends javax.swing.JFrame {
         });
 
         userPassword.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        userPassword.setText("9907224577");
         userPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userPasswordActionPerformed(evt);
@@ -1612,7 +1624,6 @@ public class HomeScreen extends javax.swing.JFrame {
         jLabel48.setText("Username: ");
 
         userUserName1.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        userUserName1.setText("12212215");
         userUserName1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userUserName1ActionPerformed(evt);
@@ -1620,7 +1631,6 @@ public class HomeScreen extends javax.swing.JFrame {
         });
 
         userPassword1.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        userPassword1.setText("9907224577");
         userPassword1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userPassword1ActionPerformed(evt);
@@ -2979,15 +2989,24 @@ public class HomeScreen extends javax.swing.JFrame {
 
     private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
         // TODO add your handling code here:
+        developerPage.setVisible(false);
         parentHome.setVisible(true);
 //        removeScreens(true);
-        developerPage.setVisible(false);
+//        developerPage.setVisible(false);
     }//GEN-LAST:event_jButton19ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         removeScreens(false);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void adminBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminBtn1ActionPerformed
+        // TODO add your handling code here:
+//        removeScreens(false);
+        developerPage.setVisible(true);
+        parentHome.setVisible(false);
+        
+    }//GEN-LAST:event_adminBtn1ActionPerformed
 
     
     
@@ -3005,6 +3024,7 @@ public class HomeScreen extends javax.swing.JFrame {
     private javax.swing.JPanel addNewCourse;
     private java.awt.Button addUserBtn;
     private javax.swing.JButton adminBtn;
+    private javax.swing.JButton adminBtn1;
     private javax.swing.JPanel adminLogin;
     private static javax.swing.JPanel adminLoginJPanel;
     private javax.swing.JPanel adminPage;
