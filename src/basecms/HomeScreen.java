@@ -55,6 +55,7 @@ public class HomeScreen extends javax.swing.JFrame {
         availableCourseStudents.setVisible(false);
         studentProfile.setVisible(false);
         sPendingFee.setVisible(false);
+        developerPage.setVisible(false);
     }
 
     @SuppressWarnings("unchecked")
@@ -84,7 +85,6 @@ public class HomeScreen extends javax.swing.JFrame {
         adminBtn = new javax.swing.JButton();
         teacherBtn = new javax.swing.JButton();
         studentBtn = new javax.swing.JButton();
-        developerBtn = new javax.swing.JButton();
         teacherHome = new javax.swing.JPanel();
         leftUserDesc = new javax.swing.JLabel();
         rightUserIcon = new javax.swing.JLabel();
@@ -94,6 +94,7 @@ public class HomeScreen extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jLabel37 = new javax.swing.JLabel();
         jButton5 = new javax.swing.JButton();
+        jButton16 = new javax.swing.JButton();
         adminLogin = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -114,6 +115,7 @@ public class HomeScreen extends javax.swing.JFrame {
         addUserBtn = new java.awt.Button();
         studentsBtn = new java.awt.Button();
         teachersBtn = new java.awt.Button();
+        jButton17 = new javax.swing.JButton();
         newUser = new javax.swing.JPanel();
         backbtn = new java.awt.Button();
         jLabel12 = new javax.swing.JLabel();
@@ -209,6 +211,7 @@ public class HomeScreen extends javax.swing.JFrame {
         jButton11 = new javax.swing.JButton();
         jLabel52 = new javax.swing.JLabel();
         jButton12 = new javax.swing.JButton();
+        jButton18 = new javax.swing.JButton();
         studentProfile = new javax.swing.JPanel();
         jLabel54 = new javax.swing.JLabel();
         jButton14 = new javax.swing.JButton();
@@ -238,6 +241,21 @@ public class HomeScreen extends javax.swing.JFrame {
         jLabel68 = new javax.swing.JLabel();
         jLabel69 = new javax.swing.JLabel();
         jLabel70 = new javax.swing.JLabel();
+        developerPage = new javax.swing.JPanel();
+        jButton19 = new javax.swing.JButton();
+        jLabel71 = new javax.swing.JLabel();
+        jLabel72 = new javax.swing.JLabel();
+        jLabel73 = new javax.swing.JLabel();
+        jLabel74 = new javax.swing.JLabel();
+        jLabel75 = new javax.swing.JLabel();
+        jLabel76 = new javax.swing.JLabel();
+        jLabel77 = new javax.swing.JLabel();
+        jLabel78 = new javax.swing.JLabel();
+        jLabel79 = new javax.swing.JLabel();
+        jLabel80 = new javax.swing.JLabel();
+        jLabel81 = new javax.swing.JLabel();
+        jLabel82 = new javax.swing.JLabel();
+        jLabel83 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
         jFrame1.getContentPane().setLayout(jFrame1Layout);
@@ -420,9 +438,6 @@ public class HomeScreen extends javax.swing.JFrame {
         desc.setText("Welcome to CMS");
         desc.setName(""); // NOI18N
 
-        developerBtn.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        developerBtn.setText("Developers");
-
         javax.swing.GroupLayout parentHomeLayout = new javax.swing.GroupLayout(parentHome);
         parentHome.setLayout(parentHomeLayout);
         parentHomeLayout.setHorizontalGroup(
@@ -434,19 +449,14 @@ public class HomeScreen extends javax.swing.JFrame {
                         .addComponent(jLabel3))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, parentHomeLayout.createSequentialGroup()
                         .addGap(20, 20, 20)
+                        .addComponent(desc, javax.swing.GroupLayout.PREFERRED_SIZE, 451, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 314, Short.MAX_VALUE)
                         .addGroup(parentHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(parentHomeLayout.createSequentialGroup()
-                                .addComponent(developerBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 296, Short.MAX_VALUE)
-                                .addGap(643, 643, 643))
-                            .addGroup(parentHomeLayout.createSequentialGroup()
-                                .addComponent(desc, javax.swing.GroupLayout.PREFERRED_SIZE, 451, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(parentHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(studentBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(adminBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(teacherBtn)
-                                    .addComponent(jLabel1))
-                                .addGap(17, 17, 17)))))
+                            .addComponent(studentBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(adminBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(teacherBtn)
+                            .addComponent(jLabel1))
+                        .addGap(19, 19, 19)))
                 .addGap(124, 124, 124))
         );
 
@@ -455,9 +465,12 @@ public class HomeScreen extends javax.swing.JFrame {
         parentHomeLayout.setVerticalGroup(
             parentHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(parentHomeLayout.createSequentialGroup()
-                .addGap(169, 169, 169)
-                .addGroup(parentHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(parentHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(parentHomeLayout.createSequentialGroup()
+                        .addGap(177, 177, 177)
+                        .addComponent(desc, javax.swing.GroupLayout.DEFAULT_SIZE, 248, Short.MAX_VALUE))
+                    .addGroup(parentHomeLayout.createSequentialGroup()
+                        .addGap(210, 210, 210)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(adminBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -465,15 +478,10 @@ public class HomeScreen extends javax.swing.JFrame {
                         .addComponent(teacherBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(studentBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 42, Short.MAX_VALUE))
-                    .addGroup(parentHomeLayout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(desc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(44, 44, 44)
                 .addComponent(jLabel3)
-                .addGap(126, 126, 126)
-                .addComponent(developerBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 61, Short.MAX_VALUE)
-                .addGap(17, 17, 17))
+                .addGap(146, 146, 146))
         );
 
         parentHomeLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {adminBtn, jLabel1, studentBtn, teacherBtn});
@@ -519,6 +527,13 @@ public class HomeScreen extends javax.swing.JFrame {
             }
         });
 
+        jButton16.setText("Logout");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout teacherHomeLayout = new javax.swing.GroupLayout(teacherHome);
         teacherHome.setLayout(teacherHomeLayout);
         teacherHomeLayout.setHorizontalGroup(
@@ -528,7 +543,9 @@ public class HomeScreen extends javax.swing.JFrame {
                 .addComponent(leftUserDesc)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(rightUserIcon)
-                .addGap(51, 51, 51))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton16)
+                .addGap(39, 39, 39))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, teacherHomeLayout.createSequentialGroup()
                 .addGroup(teacherHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(teacherHomeLayout.createSequentialGroup()
@@ -561,7 +578,8 @@ public class HomeScreen extends javax.swing.JFrame {
                     .addGroup(teacherHomeLayout.createSequentialGroup()
                         .addGroup(teacherHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(leftUserDesc)
-                            .addComponent(rightUserIcon))
+                            .addComponent(rightUserIcon)
+                            .addComponent(jButton16))
                         .addGroup(teacherHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(teacherHomeLayout.createSequentialGroup()
                                 .addGap(177, 177, 177)
@@ -740,32 +758,43 @@ public class HomeScreen extends javax.swing.JFrame {
             }
         });
 
+        jButton17.setText("Logout");
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton17ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout adminPageLayout = new javax.swing.GroupLayout(adminPage);
         adminPage.setLayout(adminPageLayout);
         adminPageLayout.setHorizontalGroup(
             adminPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(adminPageLayout.createSequentialGroup()
-                .addGap(401, 401, 401)
-                .addComponent(jLabel11)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, adminPageLayout.createSequentialGroup()
-                .addGap(0, 27, Short.MAX_VALUE)
-                .addGroup(adminPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(addUserBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel17))
-                .addGap(90, 90, 90)
+                .addGap(0, 88, Short.MAX_VALUE)
                 .addGroup(adminPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel18, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(courseBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(138, 138, 138)
+                    .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(addUserBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(67, 67, 67)
+                .addGroup(adminPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel18)
+                    .addComponent(courseBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(143, 143, 143)
                 .addGroup(adminPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel19)
                     .addComponent(teachersBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(91, 91, 91)
-                .addGroup(adminPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(studentsBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(138, 138, 138))
+                .addGap(62, 62, 62)
+                .addGroup(adminPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel16)
+                    .addComponent(studentsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(124, 124, 124))
+            .addGroup(adminPageLayout.createSequentialGroup()
+                .addGap(364, 364, 364)
+                .addComponent(jLabel11)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, adminPageLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton17)
+                .addGap(71, 71, 71))
         );
 
         adminPageLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {addUserBtn, courseBtn, studentsBtn, teachersBtn});
@@ -773,19 +802,21 @@ public class HomeScreen extends javax.swing.JFrame {
         adminPageLayout.setVerticalGroup(
             adminPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, adminPageLayout.createSequentialGroup()
+                .addGap(42, 42, 42)
+                .addComponent(jButton17)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addGroup(adminPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(adminPageLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel17)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(addUserBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(adminPageLayout.createSequentialGroup()
-                        .addGap(91, 91, 91)
                         .addComponent(jLabel11)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                        .addGap(39, 39, 39)
                         .addGroup(adminPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel16)
                             .addComponent(jLabel18)
-                            .addComponent(jLabel19)
-                            .addComponent(jLabel17))
+                            .addComponent(jLabel19))
                         .addGap(19, 19, 19)
                         .addGroup(adminPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(teachersBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -839,7 +870,6 @@ public class HomeScreen extends javax.swing.JFrame {
         jLabel25.setText("All fields are mandatory");
 
         uRegistration.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        uRegistration.setText(".");
         uRegistration.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 uRegistrationActionPerformed(evt);
@@ -847,7 +877,6 @@ public class HomeScreen extends javax.swing.JFrame {
         });
 
         uContact.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        uContact.setText(".");
         uContact.setToolTipText("Enter your contact number");
         uContact.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -856,7 +885,6 @@ public class HomeScreen extends javax.swing.JFrame {
         });
 
         uName.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        uName.setText(".");
         uName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 uNameActionPerformed(evt);
@@ -864,7 +892,6 @@ public class HomeScreen extends javax.swing.JFrame {
         });
 
         uEmail.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        uEmail.setText(".");
         uEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 uEmailActionPerformed(evt);
@@ -872,7 +899,6 @@ public class HomeScreen extends javax.swing.JFrame {
         });
 
         uPassword.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        uPassword.setText(".");
         uPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 uPasswordActionPerformed(evt);
@@ -880,7 +906,6 @@ public class HomeScreen extends javax.swing.JFrame {
         });
 
         uAge.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        uAge.setText(".");
         uAge.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 uAgeActionPerformed(evt);
@@ -905,7 +930,6 @@ public class HomeScreen extends javax.swing.JFrame {
         others.setText("Others");
 
         uDepartment.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        uDepartment.setText(".");
         uDepartment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 uDepartmentActionPerformed(evt);
@@ -1140,6 +1164,11 @@ public class HomeScreen extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/back (1).png"))); // NOI18N
         jButton1.setText("Back");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel29.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
         jLabel29.setText("Enter Credentails");
@@ -1707,6 +1736,13 @@ public class HomeScreen extends javax.swing.JFrame {
             }
         });
 
+        jButton18.setText("Logout");
+        jButton18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton18ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout studentHomeLayout = new javax.swing.GroupLayout(studentHome);
         studentHome.setLayout(studentHomeLayout);
         studentHomeLayout.setHorizontalGroup(
@@ -1716,15 +1752,17 @@ public class HomeScreen extends javax.swing.JFrame {
                 .addComponent(leftUserDesc1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(rightUserIcon3)
-                .addGap(51, 51, 51))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton18)
+                .addGap(25, 25, 25))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, studentHomeLayout.createSequentialGroup()
                 .addGroup(studentHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(studentHomeLayout.createSequentialGroup()
                         .addGap(238, 238, 238)
                         .addComponent(jLabel51)
-                        .addGap(69, 69, 69)
+                        .addGap(67, 67, 67)
                         .addComponent(jLabel52)
-                        .addGap(82, 82, 82)
+                        .addGap(84, 84, 84)
                         .addComponent(jLabel50))
                     .addGroup(studentHomeLayout.createSequentialGroup()
                         .addGap(221, 221, 221)
@@ -1744,12 +1782,13 @@ public class HomeScreen extends javax.swing.JFrame {
                 .addGap(37, 37, 37)
                 .addGroup(studentHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(leftUserDesc1)
-                    .addComponent(rightUserIcon3))
+                    .addComponent(rightUserIcon3)
+                    .addComponent(jButton18))
                 .addGap(177, 177, 177)
                 .addGroup(studentHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel50)
-                    .addComponent(jLabel52)
-                    .addComponent(jLabel51))
+                    .addComponent(jLabel51)
+                    .addComponent(jLabel52))
                 .addGap(18, 18, 18)
                 .addGroup(studentHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton11)
@@ -1979,6 +2018,116 @@ public class HomeScreen extends javax.swing.JFrame {
                 .addContainerGap(359, Short.MAX_VALUE))
         );
 
+        developerPage.setMaximumSize(new java.awt.Dimension(1048, 615));
+        developerPage.setMinimumSize(new java.awt.Dimension(1048, 615));
+        developerPage.setPreferredSize(new java.awt.Dimension(1048, 615));
+
+        jButton19.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jButton19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/back (1).png"))); // NOI18N
+        jButton19.setText("Back");
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton19ActionPerformed(evt);
+            }
+        });
+
+        jLabel71.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        jLabel71.setText("Application Details");
+
+        jLabel72.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel72.setText("App Name: Course Management System");
+
+        jLabel73.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel73.setText("App Version: 0.1 Beta");
+
+        jLabel74.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel74.setText("Programming Language: Java");
+
+        jLabel75.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel75.setText("Backend Database: MySQL");
+
+        jLabel76.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel76.setText("Dependencies Used: Java Swing, Java AWT ");
+
+        jLabel77.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel77.setText("Platform Supported: Microsoft Windows, MacOS, Linux");
+
+        jLabel78.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel78.setText("Last Updated: May 01, 2023 19:30");
+
+        jLabel79.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel79.setText("Developers:");
+
+        jLabel80.setFont(new java.awt.Font("Century Gothic", 2, 18)); // NOI18N
+        jLabel80.setText("12213891 - Rupali Sinha");
+
+        jLabel81.setFont(new java.awt.Font("Century Gothic", 2, 18)); // NOI18N
+        jLabel81.setText("12213886 - Ankit Kumar");
+
+        jLabel82.setFont(new java.awt.Font("Century Gothic", 2, 18)); // NOI18N
+        jLabel82.setText("12213885 - Amartya Sharma");
+
+        jLabel83.setText("Amendments: Wantedbear007");
+        jLabel83.setToolTipText("");
+
+        javax.swing.GroupLayout developerPageLayout = new javax.swing.GroupLayout(developerPage);
+        developerPage.setLayout(developerPageLayout);
+        developerPageLayout.setHorizontalGroup(
+            developerPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(developerPageLayout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(jButton19)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(developerPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel83)
+                    .addComponent(jLabel82)
+                    .addComponent(jLabel81)
+                    .addComponent(jLabel80)
+                    .addComponent(jLabel79)
+                    .addComponent(jLabel78)
+                    .addComponent(jLabel77)
+                    .addComponent(jLabel76)
+                    .addComponent(jLabel75)
+                    .addComponent(jLabel74)
+                    .addComponent(jLabel73)
+                    .addComponent(jLabel72)
+                    .addComponent(jLabel71))
+                .addContainerGap(444, Short.MAX_VALUE))
+        );
+        developerPageLayout.setVerticalGroup(
+            developerPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(developerPageLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(developerPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel71)
+                    .addComponent(jButton19))
+                .addGap(45, 45, 45)
+                .addComponent(jLabel72)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel73)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel74)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel75)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel76)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel77)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel78)
+                .addGap(30, 30, 30)
+                .addComponent(jLabel79)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel80)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel81)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel82)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel83)
+                .addContainerGap(56, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -2059,6 +2208,11 @@ public class HomeScreen extends javax.swing.JFrame {
                     .addGap(11, 11, 11)
                     .addComponent(sPendingFee, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(12, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(developerPage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2140,6 +2294,11 @@ public class HomeScreen extends javax.swing.JFrame {
                     .addGap(6, 6, 6)
                     .addComponent(sPendingFee, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(developerPage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         pack();
@@ -2803,6 +2962,33 @@ public class HomeScreen extends javax.swing.JFrame {
 //        sPendingFee.setVisible(false);
     }//GEN-LAST:event_jButton15ActionPerformed
 
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        // TODO add your handling code here:
+        removeScreens(false);
+    }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+        // TODO add your handling code here:
+        removeScreens(false);
+    }//GEN-LAST:event_jButton17ActionPerformed
+
+    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+        // TODO add your handling code here:
+        removeScreens(false);
+    }//GEN-LAST:event_jButton18ActionPerformed
+
+    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+        // TODO add your handling code here:
+        parentHome.setVisible(true);
+//        removeScreens(true);
+        developerPage.setVisible(false);
+    }//GEN-LAST:event_jButton19ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        removeScreens(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     
     
     public static void homeScreen() {
@@ -2838,7 +3024,7 @@ public class HomeScreen extends javax.swing.JFrame {
     private javax.swing.JTable coursesTable3;
     private javax.swing.JLabel credError;
     private final javax.swing.JLabel desc = new javax.swing.JLabel();
-    private javax.swing.JButton developerBtn;
+    private javax.swing.JPanel developerPage;
     private javax.swing.JLabel errorF;
     private javax.swing.JRadioButton female;
     private javax.swing.JLabel invalidWar;
@@ -2850,6 +3036,10 @@ public class HomeScreen extends javax.swing.JFrame {
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -2927,7 +3117,20 @@ public class HomeScreen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel70;
+    private javax.swing.JLabel jLabel71;
+    private javax.swing.JLabel jLabel72;
+    private javax.swing.JLabel jLabel73;
+    private javax.swing.JLabel jLabel74;
+    private javax.swing.JLabel jLabel75;
+    private javax.swing.JLabel jLabel76;
+    private javax.swing.JLabel jLabel77;
+    private javax.swing.JLabel jLabel78;
+    private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel80;
+    private javax.swing.JLabel jLabel81;
+    private javax.swing.JLabel jLabel82;
+    private javax.swing.JLabel jLabel83;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
