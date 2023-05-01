@@ -14,8 +14,32 @@ import javax.swing.table.*;
 public class HomeScreen extends javax.swing.JFrame {
 
 
+    
+    
     public HomeScreen() {
         initComponents();
+//        teacherHome.setVisible(false);
+//        adminLogin.setVisible(false);
+//        adminPage.setVisible(false);
+//        newUser.setVisible(false);
+//        availableUsers.setVisible(false);
+//        availableCourses.setVisible(false);
+//        loginForm.setVisible(false);
+//        availableCoursesTeacher.setVisible(false);
+//        addNewCourse.setVisible(false);
+//        pendingFees.setVisible(false);
+//        studentLogin.setVisible(false);
+//        studentHome.setVisible(false);
+//        availableCourseStudents.setVisible(false);
+//        studentProfile.setVisible(false);
+            removeScreens(false);
+        
+    }
+
+    
+//    turn visibility off
+    public void removeScreens(boolean parent) {
+        parentHome.setVisible(!parent);
         teacherHome.setVisible(false);
         adminLogin.setVisible(false);
         adminPage.setVisible(false);
@@ -30,8 +54,8 @@ public class HomeScreen extends javax.swing.JFrame {
         studentHome.setVisible(false);
         availableCourseStudents.setVisible(false);
         studentProfile.setVisible(false);
+        sPendingFee.setVisible(false);
     }
-
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -204,6 +228,16 @@ public class HomeScreen extends javax.swing.JFrame {
         pAge = new javax.swing.JLabel();
         pGender = new javax.swing.JLabel();
         pPassword = new javax.swing.JLabel();
+        sPendingFee = new javax.swing.JPanel();
+        jLabel63 = new javax.swing.JLabel();
+        jButton15 = new javax.swing.JButton();
+        jLabel64 = new javax.swing.JLabel();
+        jLabel65 = new javax.swing.JLabel();
+        jLabel66 = new javax.swing.JLabel();
+        jLabel67 = new javax.swing.JLabel();
+        jLabel68 = new javax.swing.JLabel();
+        jLabel69 = new javax.swing.JLabel();
+        jLabel70 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
         jFrame1.getContentPane().setLayout(jFrame1Layout);
@@ -1718,9 +1752,8 @@ public class HomeScreen extends javax.swing.JFrame {
                     .addComponent(jLabel51))
                 .addGap(18, 18, 18)
                 .addGroup(studentHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(studentHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton11)
-                        .addComponent(jButton12))
+                    .addComponent(jButton11)
+                    .addComponent(jButton12)
                     .addComponent(jButton10))
                 .addContainerGap(194, Short.MAX_VALUE))
         );
@@ -1863,6 +1896,89 @@ public class HomeScreen extends javax.swing.JFrame {
                 .addContainerGap(171, Short.MAX_VALUE))
         );
 
+        sPendingFee.setMaximumSize(new java.awt.Dimension(1048, 615));
+        sPendingFee.setMinimumSize(new java.awt.Dimension(1048, 615));
+
+        jLabel63.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        jLabel63.setText("Your Fee Details");
+
+        jButton15.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/back (1).png"))); // NOI18N
+        jButton15.setText("Back");
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
+            }
+        });
+
+        jLabel64.setFont(new java.awt.Font("Century Gothic", 2, 18)); // NOI18N
+        jLabel64.setText("Pending Fees:");
+
+        jLabel65.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel65.setText("Full Name:");
+
+        jLabel66.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel66.setText("Registration Number:");
+
+        jLabel67.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel67.setText("Pending Amount: Rs");
+
+        jLabel68.setFont(new java.awt.Font("Century Gothic", 2, 18)); // NOI18N
+        jLabel68.setText("null");
+
+        jLabel69.setFont(new java.awt.Font("Century Gothic", 2, 18)); // NOI18N
+        jLabel69.setText("null");
+
+        jLabel70.setFont(new java.awt.Font("Century Gothic", 2, 18)); // NOI18N
+        jLabel70.setText("null");
+
+        javax.swing.GroupLayout sPendingFeeLayout = new javax.swing.GroupLayout(sPendingFee);
+        sPendingFee.setLayout(sPendingFeeLayout);
+        sPendingFeeLayout.setHorizontalGroup(
+            sPendingFeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(sPendingFeeLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(jButton15)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(sPendingFeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel64)
+                    .addComponent(jLabel63)
+                    .addGroup(sPendingFeeLayout.createSequentialGroup()
+                        .addGroup(sPendingFeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel65)
+                            .addComponent(jLabel66)
+                            .addComponent(jLabel67))
+                        .addGap(18, 18, 18)
+                        .addGroup(sPendingFeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel68)
+                            .addComponent(jLabel69)
+                            .addComponent(jLabel70))))
+                .addContainerGap(698, Short.MAX_VALUE))
+        );
+        sPendingFeeLayout.setVerticalGroup(
+            sPendingFeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(sPendingFeeLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(sPendingFeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel63)
+                    .addComponent(jButton15))
+                .addGap(45, 45, 45)
+                .addComponent(jLabel64)
+                .addGap(32, 32, 32)
+                .addGroup(sPendingFeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel65)
+                    .addComponent(jLabel68))
+                .addGap(18, 18, 18)
+                .addGroup(sPendingFeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel66)
+                    .addComponent(jLabel69))
+                .addGap(18, 18, 18)
+                .addGroup(sPendingFeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel67)
+                    .addComponent(jLabel70))
+                .addContainerGap(359, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -1938,6 +2054,11 @@ public class HomeScreen extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(studentProfile, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(11, 11, 11)
+                    .addComponent(sPendingFee, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(12, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2014,6 +2135,11 @@ public class HomeScreen extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(studentProfile, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(6, 6, 6)
+                    .addComponent(sPendingFee, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         pack();
@@ -2026,36 +2152,39 @@ public class HomeScreen extends javax.swing.JFrame {
     private void teacherBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teacherBtnActionPerformed
         // TODO add your handling code here:
 //         loginForm.setVisible(false);
-        pendingFees.setVisible(false);
-        addNewCourse.setVisible(false);
-        availableCoursesTeacher.setVisible(false);
-        adminPage.setVisible(false);
-        adminLogin.setVisible(false);
-        newUser.setVisible(false);
-        availableCourses.setVisible(false);
-        availableUsers.setVisible(false);
-        teacherHome.setVisible(false);
+            removeScreens(true);
+//        pendingFees.setVisible(false);
+//        addNewCourse.setVisible(false);
+//        availableCoursesTeacher.setVisible(false);
+//        adminPage.setVisible(false);
+//        adminLogin.setVisible(false);
+//        newUser.setVisible(false);
+//        availableCourses.setVisible(false);
+//        availableUsers.setVisible(false);
+//        teacherHome.setVisible(false);
+////        parentHome.setVisible(false);
 //        parentHome.setVisible(false);
-        parentHome.setVisible(false);
         loginForm.setVisible(true);
     }//GEN-LAST:event_teacherBtnActionPerformed
 
     private void studentBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studentBtnActionPerformed
                        // TODO add your handling code here:
+                       removeScreens(true);
                        parentHome.setVisible(false);
                        studentLogin.setVisible(true);
     }//GEN-LAST:event_studentBtnActionPerformed
 
     private void adminBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminBtnActionPerformed
 //        System.out.print("admin button clicked");
-        loginForm.setVisible(false);
-        teacherHome.setVisible(false);
-        adminPage.setVisible(false);
-        newUser.setVisible(false);
-        availableCourses.setVisible(false);
-        availableUsers.setVisible(false);
-        parentHome.setVisible(false);
+//        loginForm.setVisible(false);
+//        teacherHome.setVisible(false);
+//        adminPage.setVisible(false);
+//        newUser.setVisible(false);
+//        availableCourses.setVisible(false);
+//        availableUsers.setVisible(false);
+//        parentHome.setVisible(false);
 //        trialPanel.setVisible(true);
+        removeScreens(true);
         adminLogin.setVisible(true);
          
          
@@ -2083,19 +2212,20 @@ public class HomeScreen extends javax.swing.JFrame {
 
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
         // TODO add your handling code here:
-        adminLogin.setVisible(false);
-        parentHome.setVisible(true);
-        teacherHome.setVisible(false);
 //        adminLogin.setVisible(false);
-        adminPage.setVisible(false);
-        newUser.setVisible(false);
-        availableUsers.setVisible(false);
-        availableCourses.setVisible(false);
-        loginForm.setVisible(false);
-        availableCoursesTeacher.setVisible(false);
-        addNewCourse.setVisible(false);
-        pendingFees.setVisible(false);
-        studentLogin.setVisible(false);
+        removeScreens(true);
+        parentHome.setVisible(true);
+//        teacherHome.setVisible(false);
+////        adminLogin.setVisible(false);
+//        adminPage.setVisible(false);
+//        newUser.setVisible(false);
+//        availableUsers.setVisible(false);
+//        availableCourses.setVisible(false);
+//        loginForm.setVisible(false);
+//        availableCoursesTeacher.setVisible(false);
+//        addNewCourse.setVisible(false);
+//        pendingFees.setVisible(false);
+//        studentLogin.setVisible(false);
         
     }//GEN-LAST:event_backBtnActionPerformed
 
@@ -2107,7 +2237,8 @@ public class HomeScreen extends javax.swing.JFrame {
         System.out.print("Username: " + uName + " password: " + pass);
             if (uName.equalsIgnoreCase("root") && pass.equalsIgnoreCase("root")) {
                 System.out.println("Successfully logged in. ");
-                adminLogin.setVisible(false);
+                removeScreens(true);
+//                adminLogin.setVisible(false);
                 adminPage.setVisible(true);
             } else {
                 credError.setText("Invaid credentials ! Try again");
@@ -2116,16 +2247,18 @@ public class HomeScreen extends javax.swing.JFrame {
 
     private void addUserBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addUserBtnActionPerformed
         // TODO add your handling code here:
-        availableCourses.setVisible(false);
-        adminPage.setVisible(false);
+        removeScreens(true);
+//        availableCourses.setVisible(false);
+//        adminPage.setVisible(false);
         newUser.setVisible(true);
         
     }//GEN-LAST:event_addUserBtnActionPerformed
 
     private void backbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbtnActionPerformed
         // TODO add your handling code here:
+        removeScreens(true);
         adminPage.setVisible(true);
-        newUser.setVisible(false);
+//        newUser.setVisible(false);
     }//GEN-LAST:event_backbtnActionPerformed
 
     private void uRegistrationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uRegistrationActionPerformed
@@ -2210,7 +2343,8 @@ public class HomeScreen extends javax.swing.JFrame {
 
     private void backbtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbtn1ActionPerformed
         // TODO add your handling code here:
-        availableCourses.setVisible(false);
+//        availableCourses.setVisible(false);
+        removeScreens(true);
         adminPage.setVisible(true);
     }//GEN-LAST:event_backbtn1ActionPerformed
 
@@ -2244,17 +2378,18 @@ public class HomeScreen extends javax.swing.JFrame {
         }
         
         
-       
-        newUser.setVisible(false);
-        adminPage.setVisible(false);
+       removeScreens(true);
+//        newUser.setVisible(false);
+//        adminPage.setVisible(false);
         availableCourses.setVisible(true);
-        availableCourses.updateUI();
+//        availableCourses.updateUI();
         
     }//GEN-LAST:event_courseBtnActionPerformed
 
     private void backbtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbtn2ActionPerformed
         // TODO add your handling code here:
-        availableUsers.setVisible(false);
+        removeScreens(true);
+//        availableUsers.setVisible(false);
         adminPage.setVisible(true);
     }//GEN-LAST:event_backbtn2ActionPerformed
 
@@ -2289,9 +2424,10 @@ public class HomeScreen extends javax.swing.JFrame {
            }
            
        
-        adminPage.setVisible(false);
+//        adminPage.setVisible(false);
+        removeScreens(true);
         availableUsers.setVisible(true);
-        availableUsers.updateUI();
+//        availableUsers.updateUI();
     }//GEN-LAST:event_teachersBtnActionPerformed
 
     private void studentsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studentsBtnActionPerformed
@@ -2327,32 +2463,10 @@ public class HomeScreen extends javax.swing.JFrame {
 //        ResultSet resultSet = Admin.registeredUsers();
 //        
 //        
-//        int tableRowCount = tableModel.getRowCount();
-//        
-//        if (tableRowCount == 0) {
-//        
-//        }
-//        
-//        while (resultSet.next()) {
-////            System.out.println(resultSet.getString("id"));
-//                        String id = resultSet.getString("id");
-//            String name = resultSet.getString("name");
-//            String reg = resultSet.getString("reg");
-//            String contact = resultSet.getString("phone");
-//            String email = resultSet.getString("email");
-//            String department = resultSet.getString("schooldep");
-//            String gender = resultSet.getString("sex");
-//            String age = resultSet.getString("age");
-////            String enroll = resultSet.getString("enroll");
-//                        String[] headData = {id, name, reg, contact, email, department,age, gender};
-//            if (tableRowCount == 0) {
-//                tableModel.addRow(headData);
-//            }
-//        }
-//        } catch (Exception e) {System.out.print(e);}
+
        
-       
-        adminPage.setVisible(false);
+       removeScreens(true);
+//        adminPage.setVisible(false);
         availableUsers.setVisible(true);
         
     }//GEN-LAST:event_studentsBtnActionPerformed
@@ -2383,7 +2497,8 @@ public class HomeScreen extends javax.swing.JFrame {
             rightUserIcon.setText(icon);
             leftUserDesc.setText(header);
             rightUserIcon1.setText(icon);
-            loginForm.setVisible(false);
+//            loginForm.setVisible(false);
+            removeScreens(true);
             teacherHome.setVisible(true);
         } else {
             System.out.print("User not available");
@@ -2421,9 +2536,9 @@ public class HomeScreen extends javax.swing.JFrame {
         }
         } catch (Exception e) {System.out.print(e);}
         }
-        
+        removeScreens(true);
         availableCoursesTeacher.setVisible(true);
-        teacherHome.setVisible(false);
+//        teacherHome.setVisible(false);
         
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -2432,7 +2547,8 @@ public class HomeScreen extends javax.swing.JFrame {
         
         String userIcon = userSession.get(0);
         rightUserIcon2.setText(userIcon);
-        teacherHome.setVisible(false);
+//        teacherHome.setVisible(false);
+        removeScreens(true);
         addNewCourse.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -2461,21 +2577,23 @@ public class HomeScreen extends javax.swing.JFrame {
         } catch (Exception e) {System.out.print(e);}
         }
         
-        
+        removeScreens(true);
         pendingFees.setVisible(true);
-        teacherHome.setVisible(false);
+//        teacherHome.setVisible(false);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        removeScreens(true);
         teacherHome.setVisible(true);
-        availableCoursesTeacher.setVisible(false);
+//        availableCoursesTeacher.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
+        removeScreens(true);
         teacherHome.setVisible(true);
-        addNewCourse.setVisible(false);
+//        addNewCourse.setVisible(false);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void uRegistration1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uRegistration1ActionPerformed
@@ -2538,8 +2656,9 @@ public class HomeScreen extends javax.swing.JFrame {
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
+        removeScreens(true);
         teacherHome.setVisible(true);
-        pendingFees.setVisible(false);
+//        pendingFees.setVisible(false);
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void userUserName1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userUserName1ActionPerformed
@@ -2567,7 +2686,8 @@ public class HomeScreen extends javax.swing.JFrame {
             rightUserIcon3.setText(icon);
             leftUserDesc1.setText(header);
 //            rightUserIcon1.setText(icon);
-            studentLogin.setVisible(false);
+//            studentLogin.setVisible(false);
+            removeScreens(true);
             studentHome.setVisible(true);
         } else {
             System.out.print("User not available");
@@ -2577,21 +2697,51 @@ public class HomeScreen extends javax.swing.JFrame {
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
+        removeScreens(true);
         parentHome.setVisible(true);
-        pendingFees.setVisible(false);
+//        pendingFees.setVisible(false);
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
         rightUserIcon4.setText(userSession.get(0));
+        DefaultTableModel tableModel = (DefaultTableModel)coursesTable3.getModel();
+        
+        if (tableModel.getRowCount() == 0) {
+            try {
+        
+        ResultSet resultSet = Admin.availableCourses();
+        
+        while (resultSet.next()) {
+//            System.out.println(resultSet.getString("id"));
+            String id = resultSet.getString("id");
+            String name = resultSet.getString("name");
+            String author = resultSet.getString("author");
+            String duration = resultSet.getString("duration");
+            String price = resultSet.getString("price");
+            String rating = resultSet.getString("rating");
+            String cerification = resultSet.getString("certification");
+            String enroll = resultSet.getString("enroll");
+            String[] headData = {id, name, author, duration, price, rating, cerification, enroll};
+             
+//            
+            tableModel.addRow(headData);
+            
+        }
+        } catch (Exception e) {System.out.print(e);}
+        }
+        
+        rightUserIcon4.setText(userSession.get(0));
+        removeScreens(true);
         availableCourseStudents.setVisible(true);
-        studentHome.setVisible(false);
+//        studentHome.setVisible(false);
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         // TODO add your handling code here:
+        removeScreens(true);
         studentProfile.setVisible(true);
-        studentHome.setVisible(false);
+//        studentHome.setVisible(false);
         for (String str : userSession) {
             System.out.println(str);
         }
@@ -2608,21 +2758,50 @@ public class HomeScreen extends javax.swing.JFrame {
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         // TODO add your handling code here:
+        
+        String registration = null;
+        String pending = null;
+        try  {
+            ResultSet resultSet = Students.pendingFees();
+            
+            while (resultSet.next()) {
+                registration = resultSet.getString("reg");
+                pending = resultSet.getString("fees");
+            }
+        } catch (Exception e) {
+            System.out.print(e);
+        }
+        
+        jLabel68.setText(userSession.get(0));
+        jLabel69.setText(registration);
+        jLabel70.setText(pending);
+//        studentHome.setVisible(false);
+        removeScreens(true);
+        sPendingFee.setVisible(true);
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         // TODO add your handling code here:
 //        rightUserIcon4.set
+        removeScreens(true);
         studentHome.setVisible(true);
-        availableCourseStudents.setVisible(false);
+//        availableCourseStudents.setVisible(false);
         
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         // TODO add your handling code here:
+        removeScreens(true);
         studentHome.setVisible(true);
-        studentProfile.setVisible(false);
+//        studentProfile.setVisible(false);
     }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+        // TODO add your handling code here:
+        removeScreens(true);
+        studentHome.setVisible(true);
+//        sPendingFee.setVisible(false);
+    }//GEN-LAST:event_jButton15ActionPerformed
 
     
     
@@ -2670,6 +2849,7 @@ public class HomeScreen extends javax.swing.JFrame {
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -2738,7 +2918,15 @@ public class HomeScreen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel61;
     private javax.swing.JLabel jLabel62;
+    private javax.swing.JLabel jLabel63;
+    private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel65;
+    private javax.swing.JLabel jLabel66;
+    private javax.swing.JLabel jLabel67;
+    private javax.swing.JLabel jLabel68;
+    private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel70;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JRadioButton jRadioButton1;
@@ -2773,6 +2961,7 @@ public class HomeScreen extends javax.swing.JFrame {
     private javax.swing.JLabel rightUserIcon2;
     private javax.swing.JLabel rightUserIcon3;
     private javax.swing.JLabel rightUserIcon4;
+    private javax.swing.JPanel sPendingFee;
     private javax.swing.JButton studentBtn;
     private javax.swing.JPanel studentHome;
     private javax.swing.JPanel studentLogin;

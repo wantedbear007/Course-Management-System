@@ -122,21 +122,25 @@ class Students {
          }
     }
     // <- MODULE FOR VIEWING PENDING FEES ->
-    static void pendingFees() {
+    static ResultSet pendingFees() {
         ArrayList<String> userData = Resources.getLoginSession();
 
+        
+        ResultSet resultSet = null;
         try {
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM FEE WHERE REG='" + userData.get(1) +"'");
+            resultSet = statement.executeQuery("SELECT * FROM FEE WHERE REG='" + userData.get(1) +"'");
 
-            if (!resultSet.next()) {
-                System.out.println("No dues");
-            } else {
-                System.out.println("Your pending fee is: ");
-                System.out.println("Rs. : " + resultSet.getString("fees") );
-            }
+//            if (!resultSet.next()) {
+//                System.out.println("No dues");
+//            } else {
+//                System.out.println("Your pending fee is: ");
+//                System.out.println("Rs. : " + resultSet.getString("fees") );
+//            }
         } catch (Exception e) {
             System.out.println(e);
         }
+        
+        return resultSet;
 
 
     }
