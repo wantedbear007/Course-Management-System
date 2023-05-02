@@ -3,8 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package basecms;
+import java.awt.Image;
 import java.util.*;
 import java.sql.ResultSet;
+import javax.swing.ImageIcon;
 import javax.swing.table.*;
 
 /**
@@ -18,6 +20,9 @@ public class HomeScreen extends javax.swing.JFrame {
     
     public HomeScreen() {
         initComponents();
+        Image img = new ImageIcon(this.getClass().getResource("cms.png")).getImage();   
+//        setIcon();
+            this.setIconImage(img);
 //        teacherHome.setVisible(false);
 //        adminLogin.setVisible(false);
 //        adminPage.setVisible(false);
@@ -36,6 +41,9 @@ public class HomeScreen extends javax.swing.JFrame {
         
     }
 
+//    public void setIcon() {
+//        setIconImage(Toolkit.getDefaultTookkit().)
+//    }
     
 //    turn visibility off
     public void removeScreens(boolean parent) {
@@ -328,6 +336,7 @@ public class HomeScreen extends javax.swing.JFrame {
         adminLoginJPanel.getAccessibleContext().setAccessibleParent(adminLoginJPanel);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Course Management System");
 
         availableCourseStudents.setMaximumSize(new java.awt.Dimension(1048, 615));
         availableCourseStudents.setMinimumSize(new java.awt.Dimension(1048, 615));
@@ -559,9 +568,9 @@ public class HomeScreen extends javax.swing.JFrame {
                 .addComponent(leftUserDesc)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(rightUserIcon)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jButton16)
-                .addGap(39, 39, 39))
+                .addGap(112, 112, 112))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, teacherHomeLayout.createSequentialGroup()
                 .addGroup(teacherHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(teacherHomeLayout.createSequentialGroup()
@@ -1762,9 +1771,9 @@ public class HomeScreen extends javax.swing.JFrame {
                 .addComponent(leftUserDesc1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(rightUserIcon3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jButton18)
-                .addGap(25, 25, 25))
+                .addGap(116, 116, 116))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, studentHomeLayout.createSequentialGroup()
                 .addGroup(studentHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(studentHomeLayout.createSequentialGroup()
@@ -2310,6 +2319,8 @@ public class HomeScreen extends javax.swing.JFrame {
                     .addComponent(developerPage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
+
+        getAccessibleContext().setAccessibleDescription("This is system to manage online courses.");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
